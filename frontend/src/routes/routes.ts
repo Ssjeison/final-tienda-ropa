@@ -11,7 +11,7 @@ interface Route {
 
 const routes: Route[] = [
   { path: '/', component: Home },
-  { path: '/add-product', component: AddProduct },
+  { path: '/add-recipe', component: AddProduct },
   { path: '/product/:id', component: ProductDetails },
   { path: '/register-user', component: RegisterUser },
   { path: '/users', component: UsersList },

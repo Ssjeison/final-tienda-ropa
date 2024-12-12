@@ -140,7 +140,7 @@ body {
     background-color: var(--color-secundario);
     color: white;
     font-weight: bold;
-    border: none;
+    border-radius: 24px;
     cursor: pointer;
   }
   
