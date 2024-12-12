@@ -4,7 +4,7 @@ import { title } from "process";
 export interface IProduct extends Document {
     name: string,
     description: string,
-    precio: number,
+    price: number,
     imagenUrl: string,
     stock: number,
     category: mongoose.Schema.Types.ObjectId
