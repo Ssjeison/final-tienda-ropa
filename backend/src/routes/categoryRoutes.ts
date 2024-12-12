@@ -4,7 +4,7 @@ import {getAllCategory, addCategory, getCategoryById} from '../controllers/categ
 const router = Router();
 
 router.get('/', getAllCategory);
-router.post('/', addCategory);
+router.post('/create', addCategory);
 router.get('/:id', getCategoryById);
 
 export default router;

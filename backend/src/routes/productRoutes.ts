@@ -4,7 +4,7 @@ import {getAllProducts, addProduct, getProductById} from '../controllers/product
 const router = Router();
 
 router.get('/', getAllProducts);
-router.post('/', addProduct);
+router.post('/create', addProduct);
 router.get('/:id', getProductById);
 
 export default router;
