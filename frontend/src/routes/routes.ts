@@ -1,6 +1,6 @@
 import Home from '../pages/Home';
-import AddRecipe from '../pages/AddRecipe';
-import RecipeDetails from '../pages/RecipeDetails';
+import AddProduct from '../pages/AddProduct';
+import ProductDetails from '../pages/ProductDetails';
 import RegisterUser from '../pages/RegisterUser';
 import UsersList from '../pages/UsersList';
 
@@ -11,8 +11,8 @@ interface Route {
 
 const routes: Route[] = [
   { path: '/', component: Home },
-  { path: '/add-recipe', component: AddRecipe },
-  { path: '/recipe/:id', component: RecipeDetails },
+  { path: '/add-product', component: AddProduct },
+  { path: '/product/:id', component: ProductDetails },
   { path: '/register-user', component: RegisterUser },
   { path: '/users', component: UsersList },
 ];

@@ -1,16 +1,16 @@
 import React from 'react';
-import RecipeCard from '../components/RecipeCard';
-import useFetchRecipes from '../hooks/useFetchRecipies';
+import ProductCard from '../components/ProductCard';
+import useFetchProducts from '../hooks/useFetchProducts';
 
 const Home: React.FC = () => {
-  const { recipes, loading } = useFetchRecipes();
+  const { products, loading } = useFetchProducts();
 
-  if (loading) return <p>Loading recipes...</p>;
+  if (loading) return <p>Loading products...</p>;
 
   return (
     <div className="home">
-      {recipes.map((recipe) => (
-        <RecipeCard key={recipe._id} recipe={recipe} />
+      {products.map((product) => (
+        <ProductCard key={product._id} product={product} />
       ))}
     </div>
   );
