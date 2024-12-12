@@ -3,14 +3,14 @@ import Client from "../models/Client";
 
 export const registerClient = async (req: Request, res: Response): Promise<void> => {
     try{
-        const { clientname, email, password } = req.body;
+        const { username, email, password } = req.body;
         const existingClient = await Client.findOne({ email });
         if(existingClient){
             res.status(400).json({message: 'Client already exists'});
             return;
         }
 
-        const newClient = new Client({clientname, email, password});
+        const newClient = new Client({username, email, password});
         await newClient.save();
         res.status(201).json({message: 'Client registered successfully', Client: newClient});
     }catch(error){
