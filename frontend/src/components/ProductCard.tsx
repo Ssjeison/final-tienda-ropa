@@ -5,7 +5,7 @@ interface Product {
   category: string;
   description: string;
   price: number;
-  image?: string;
+  imagenUrl?: string;
 }
 
 interface ProductCardProps {
@@ -13,12 +13,12 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const { name, category, description, price, image } = product;
+  const { name, category, description, price, imagenUrl } = product;
 
   return (
     <div className="recipe-card">
       <img 
-        src={image || '/images/default.jpg'} 
+        src={imagenUrl || '/images/default.jpg'} 
         alt={`Imagen de ${name}`} 
         onError={(e) => (e.currentTarget.src = '/images/default.jpg')} 
         style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
