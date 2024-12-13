@@ -13,7 +13,7 @@ const AddProduct: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post('/api/products', formData);
+      await axios.post('/api/product', formData);
       alert('Product added successfully');
     } catch (error) {
       alert('Error adding product');

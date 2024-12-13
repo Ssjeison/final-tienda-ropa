@@ -3,8 +3,8 @@ import Product from "../models/Product";
 
 export const addProduct = async (req: Request, res: Response): Promise<void> => {
     try{
-        const {name, description, price, imagenUrl, stock} = req.body;
-        const newProduct = new Product({name, description, price, imagenUrl, stock});
+        const {name, category, description, price, imagenUrl} = req.body;
+        const newProduct = new Product({name, category, description, price, imagenUrl});
         await newProduct.save();
         res.status(201).json({message: 'Product created successfully', product: newProduct});
     }catch(error){

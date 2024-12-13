@@ -17,7 +17,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
   return (
     <div className="recipe-card">
-      <img src={image || 'default.jpg'} alt={name} />
+      <img 
+        src={image || '/images/default.jpg'} 
+        alt={`Imagen de ${name}`} 
+        onError={(e) => (e.currentTarget.src = '/images/default.jpg')} 
+        style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+      />
       <h3>{name}</h3>
       <p>
         <strong>Category:</strong> {category}
