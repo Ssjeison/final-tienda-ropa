@@ -68,9 +68,9 @@ body {
   
   /* Recipe Card */
   .recipe-card {
-    background-color: white;
+    background-color: var(--color-primario);
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 1rem;
     max-width: 300px;
@@ -79,9 +79,9 @@ body {
   
   .recipe-card img {
     width: 100%;
-    height: 150px;
+    height: 50%;
     object-fit: cover;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--color-primario);
   }
   
   .recipe-card h3 {

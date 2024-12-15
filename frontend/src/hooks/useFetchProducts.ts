@@ -9,6 +9,7 @@ interface Product {
   description: string;
   price: number;
   imagenUrl?: string;
+  stock: number;
 }
 
 const useFetchProducts = () => {
