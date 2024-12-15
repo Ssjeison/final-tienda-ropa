@@ -6,7 +6,7 @@ const useFetchUsers = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    apiClient.get('/api/users')
+    apiClient.get('/api/user')
       .then(response => setUsers(response.data))
       .finally(() => setLoading(false));
   }, []);

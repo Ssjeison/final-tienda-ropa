@@ -8,7 +8,7 @@ interface Product {
   category: string;
   description: string;
   price: number;
-  image?: string;
+  imagenUrl?: string;
 }
 
 const useFetchProducts = () => {
@@ -20,6 +20,7 @@ const useFetchProducts = () => {
       try {
         const response = await apiClient.get('api/product');
         setProducts(response.data);
+        console.log( response );
       } catch (error) {
         console.error('Error fetching products:', error);
       } finally {

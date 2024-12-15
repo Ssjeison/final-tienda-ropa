@@ -4,14 +4,17 @@ import useFetchUsers from '../hooks/useFetchUsers';
 
 const UsersList: React.FC = () => {
   const { users, loading } = useFetchUsers();
+  console.log( users );
 
   if (loading) return <p>Loading users...</p>;
 
   return (
     <div className="users-list">
-      {users.map((user: any) => (
-        <UserCard key={user._id} username={user.username} email={user.email} />
-      ))}
+      {
+        users.map((user: any) => (
+          <UserCard key={user._id} username={user.username} email={user.email} />
+        ))
+      }
     </div>
   );
 };
