@@ -6,6 +6,7 @@ interface Product {
   description: string;
   price: number;
   imagenUrl?: string;
+  stock: number;
 }
 
 interface ProductCardProps {
@@ -13,7 +14,7 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const { name, category, description, price, imagenUrl } = product;
+  const { name, category, description, price, imagenUrl, stock } = product;
 
   return (
     <div className="recipe-card">
@@ -27,10 +28,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <p>
         <strong>Category:</strong> {category}
       </p>
-      <h4>Description:</h4>
+      <strong>Description:</strong>
       <p>{description}</p>
-      <h4>Price:</h4>
-      <p>{price}</p>
+      <p>
+        <strong>Price:</strong> {price}
+      </p>
+      <p>
+        <strong>Stock:</strong> {stock}
+      </p>
     </div>
   );
 };
