@@ -31,7 +31,7 @@ body {
   
   a {
     text-decoration: none;
-    color: #d32f2f;
+    color: var(--color-terciario);
   }
   
   /* Navbar */
@@ -61,7 +61,7 @@ body {
     font-weight: 600;
     text-align: center;
     padding: 0.5rem;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
   }
@@ -106,7 +106,7 @@ body {
   .user-card h3 {
     margin: 0;
     font-size: 1.2rem;
-    color: #d32f2f;
+    color: var(--color-secundario);
   }
   
   .user-card p {
